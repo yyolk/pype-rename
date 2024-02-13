@@ -15,7 +15,7 @@ For now, add `pype-rename.py` to your path.
 
 ```
 cd ~/.local/bin
-curl -LO https://raw.githubusercontent.com/yyolk/pype-rename/main/pype-rename.py pype-rename
+curl -L https://raw.githubusercontent.com/yyolk/pype-rename/main/pype-rename.py > pype-rename
 chmod +x pype-rename
 ```
 
