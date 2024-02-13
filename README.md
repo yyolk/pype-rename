@@ -9,7 +9,7 @@ get it to work without it breaking the
 terminal[^pipe-rename54]<sup>,</sup>[^pipe-rename46].
 
 
-# Usage
+# Installation 
 
 For now, add `pype-rename.py` to your path.
 
@@ -18,6 +18,8 @@ cd ~/.local/bin
 curl -L https://raw.githubusercontent.com/yyolk/pype-rename/main/pype-rename.py > pype-rename
 chmod +x pype-rename
 ```
+
+# Usage
 
 Pipe in files that you'd like to be renamed (they're recognized as paths).
 
