@@ -9,6 +9,7 @@ from subprocess import check_call
 
 EDITOR = os.environ.get("EDITOR", "vim")
 
+logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
 
 text = sys.stdin.read()
@@ -29,7 +30,18 @@ with tempfile.NamedTemporaryFile(suffix=".tmp") as tf:
 
     new_names = open(tf.name).readlines()
 
+rename_count = 0
 for i in range(len(new_names)):
     logger.debug("mv %s %s", (old_names[i].decode(), new_names[i].rstrip()))
     # Direct line index mapping of input to output.
-    os.rename(old_names[i].decode(), new_names[i].rstrip())
+    src = old_names[i].decode()
+    dest = new_names[i].strip()
+    # Only rename if the name changed.
+    if src != dest:
+        os.rename(src, dest)
+        rename_count += 1
+
+if rename_count:
+    logger.info("Successfully renamed %s files.", rename_count)
+else:
+    logger.info("No changes.")
