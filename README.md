@@ -39,4 +39,5 @@ close the editor.
 
 [^pipe-rename54]: https://github.com/marcusbuffett/pipe-rename/issues/54
 [^pipe-rename46]: https://github.com/marcusbuffett/pipe-rename/issues/46
+
 [pipe-rename]: https://github.com/marcusbuffett/pipe-rename
